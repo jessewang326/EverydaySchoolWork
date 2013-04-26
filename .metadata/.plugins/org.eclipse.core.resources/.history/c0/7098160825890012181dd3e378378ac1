@@ -1,0 +1,60 @@
+
+public class Square {
+	private int x;
+	private int y;
+	private boolean acce;
+	private boolean visited;
+	private boolean entrance;
+	private boolean exit;
+	
+
+	public Square(){
+		x = 0;
+		y = 0;
+		acce = true;
+		visited = false;
+		entrance = false;
+		exit = false;
+	}
+
+	public Square(int x, int y ){
+		this.x = x;
+		this.y = y;
+		acce = true;
+		visited = false;
+		entrance = false;
+		exit = false;
+	}
+
+	public int getX(){
+		return x;
+	}
+
+	public int getY(){
+		return y;
+	}
+	
+	public boolean isAcce(){
+		return acce;
+	}
+
+	public boolean isVisited(){
+		return visited;
+	}
+	
+	public void visit(){
+		this.visited = true;
+	}
+	
+	public void isWall(){
+		this.acce = false;
+	}
+	
+	public void isEntrance(){
+		this.entrance = true;
+	}
+	
+	public void isExit(){
+		this.exit = true;
+	}
+}

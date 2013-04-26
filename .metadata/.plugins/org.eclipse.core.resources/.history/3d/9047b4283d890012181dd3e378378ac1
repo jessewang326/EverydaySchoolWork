@@ -1,0 +1,137 @@
+public class Maze {
+	private Square[][] maze;
+	private Square entrance;
+	private Square exit;
+
+	public Maze(String mazeFile){
+		int x = 0;
+		int y = 0;
+		String line;
+		InStringFile reader = new InStringFile(mazeFile);
+		System.out.println("\nReading from file " + mazeFile + "\n");
+
+		//create the maze
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		maze = new Square[x][y];
+
+		// the entrance
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		entrance = new Square(x,y);
+		entrance.setEntrance();
+
+		// the exit
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		exit = new Square(x,y);
+		exit.setExit();
+
+		x = 0;
+		y = 0;
+		do
+		{
+			line = (reader.read());
+
+			while (!line.isEmpty()){
+				System.out.println(x);
+				maze[x][y] = new Square(x,y);
+				System.out.println(line);
+				if( line.charAt(0) == '0')
+					maze[x][y].isWall();
+
+				line = line.substring(1,line.length());
+				x++;
+			}
+			y++;
+		}
+		while (!reader.endOfFile()); 
+
+		reader.close(); 
+	}
+
+	/*
+	pubilc Maze(String mazeFile){
+		int x = 0;
+		int y = 0;
+		String line;
+		// create object that controls file reading and opens the file
+		InStringFile reader = new InStringFile(mazeFile);
+		System.out.println("\nReading from file " + mazeFile + "\n");
+
+		//create the maze
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		maze = new Square[x][y];
+
+
+		// the entrance
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		entrance = new Square(x,y);
+		entrance.setEntrance();
+
+
+		// the exit
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		exit = new Square(x,y);
+		exit.setExit();
+
+
+		x = 0;
+		y = 0;
+		do
+		{
+			line = (reader.read());
+
+			while (!line.isEmpty()){
+				if( line.charAt(0) == '0')
+					maze[x][y].isWall();
+
+				x++;
+			}
+			y++;
+		}
+		while (!reader.endOfFile()); 
+
+		reader.close(); 
+	}
+	 */
+
+	public boolean explore(Explorator e){
+		e.add(entrance);
+		while (!e.isEmpty()){
+			Square curr = e.getNext();
+			if(!curr.isVisited()){
+				curr.visit();
+				if(curr.isExit())
+					return true;
+				int x = curr.getX();
+				int y = curr.getY();
+				if( y-1 >=0)
+					e.add(maze[x][y-1]);
+				if(x+1 <= maze.length-1)
+					e.add(maze[x+1][y]);
+				if(y+1 <= maze[x].length-1)
+					e.add(maze[x][y+1]);
+				if(x-1 >=0)
+					e.add(maze[x-1][y]);
+			}
+		}
+		return false;
+	}
+}
+

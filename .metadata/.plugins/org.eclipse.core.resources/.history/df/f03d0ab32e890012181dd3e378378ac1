@@ -1,0 +1,38 @@
+
+public class StackExplorator implements Explorator {
+	 private int count;  
+	  /** pointer to top of stack */
+	  private LinearNode<Square> top; 
+	
+	public StackExplorator()
+	{
+		count = 0;
+	    top = null;
+	}
+	
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Square getNext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void add(Square s) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

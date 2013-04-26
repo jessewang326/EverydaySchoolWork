@@ -1,0 +1,37 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.ui.views.log",1364176829959
+started,bundle,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"org.eclipse.ui.workbench",1364176829974
+started,bundle,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.workbench.texteditor",1364176830057
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1364176830126
+started,bundle,com.android.ide.eclipse.base,21.0.1.v201212060256-543035,"com.android.ide.eclipse.base",1364176830143
+started,bundle,org.eclipse.emf.common,2.7.0.v20120127-1122,"org.eclipse.emf.common",1364176830178
+started,bundle,org.eclipse.emf.ecore,2.7.0.v20120127-1122,"org.eclipse.emf.ecore",1364176830231
+started,bundle,org.eclipse.emf.ecore.xmi,2.7.0.v20120127-1122,"org.eclipse.emf.ecore.xmi",1364176830259
+started,bundle,org.eclipse.wst.common.project.facet.core,1.4.201.v201201101553,"org.eclipse.wst.common.project.facet.core",1364176830283
+started,bundle,org.eclipse.wst.web,1.1.501.v201201190400,"org.eclipse.wst.web",1364176830305
+os,sysinfo,,,"win32",1364176830312
+arch,sysinfo,,,"x86_64",1364176830312
+ws,sysinfo,,,"win32",1364176830312
+locale,sysinfo,,,"zh_CN",1364176830312
+processors,sysinfo,,,"4",1364176830312
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1364176830312
+java.runtime.version,sysinfo,,,"1.7.0_11-b21",1364176830312
+java.specification.name,sysinfo,,,"Java Platform API Specification",1364176830312
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1364176830312
+java.specification.version,sysinfo,,,"1.7",1364176830312
+java.vendor,sysinfo,,,"Oracle Corporation",1364176830312
+java.version,sysinfo,,,"1.7.0_11",1364176830312
+java.vm.info,sysinfo,,,"mixed mode",1364176830312
+java.vm.name,sysinfo,,,"Java HotSpot(TM) 64-Bit Server VM",1364176830312
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1364176830312
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1364176830312
+java.vm.specification.version,sysinfo,,,"1.7",1364176830312
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1364176830312
+java.vm.version,sysinfo,,,"23.6-b04",1364176830312
+started,bundle,org.eclipse.jst.ws.jaxrs.core,1.0.301.v201108240656,"org.eclipse.jst.ws.jaxrs.core",1364176830334
+started,bundle,com.android.ide.eclipse.adt,21.0.1.v201212060256-543035,"com.android.ide.eclipse.adt",1364176830507
+started,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201106061540,"org.eclipse.epp.usagedata.ui",1364176831396
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1364176831480
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1364176832605
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1364176839363
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1364176839392

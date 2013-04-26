@@ -1,0 +1,86 @@
+import java.util.Iterator;
+public class LinkedBinaryTree2<T> implements BinaryTreeADT {
+	protected int count;
+	protected BinaryTreeNode<T> root;
+	
+	public LinkedBinaryTree2(){
+		count = 0;
+		root = null;
+	}
+
+	public LinkedBinaryTree2(T element){
+		count = 1;
+		root = new BinaryTreeNode<T>(element);
+	}
+	
+	public LinkedBinaryTree2(T rootElement, LinkedBinaryTree2<T> leftTree, LinkedBinaryTree2<T> rightTree){
+		this.root = new BinaryTreeNode(rootElement);
+		count = 1;
+		
+		if(leftTree == null)
+			root.setLeft(null);
+		else{
+			this.root.setLeft(leftTree.root);
+			count = count+1;
+		}
+		
+		if(rightTree == null)
+			root.setRight(null);
+		else{
+			this.root.setRight(rightTree.root);
+			count = count +1;
+		}
+		}
+		
+	
+	
+	
+	
+	
+	////////////////////Method////////////////////
+	public T getRoot() throws EmptyCollectionException{
+		if(root == null)
+			throw new EmptyCollectionException("Empty Collection");
+		else
+			return root.getElement();
+	}
+	
+	public boolean isEmpty(){
+		return count==0;
+	}
+	
+	public int size(){
+		return count;
+	}
+	
+	public boolean contains (T targetElement) {
+		return (this.findAgain(targetElement,root) != null);
+	}
+
+	
+	public T find (T targetElement) throws ElementNotFoundException {
+		BinaryTreeNode<T> current = findAgain(targetElement, root);
+		if (current == null)
+			throw new ElementNotFoundException("Element Not Found!");
+		else
+		return (current.getElement());
+		
+		
+	}
+	
+	public BinaryTreeNode<T> findAgain(T targetElement, BinaryTreeNode<T> next){
+		if (next == null)
+			return null;
+		
+		if (next.getElement().equals(targetElement))
+			return next;
+		
+		BinaryTreeNode<T> temp = findAgain(targetElement, next.getLeft());
+		if (temp == null)
+		findAgain(targetElement, next.getRight());
+		
+		return temp;
+		
+	}
+	
+}

@@ -1,0 +1,74 @@
+
+public class Square {
+	private int x;
+	private int y;
+	private boolean acce;
+	private boolean visited;
+	private boolean entrance;
+	private boolean exit;
+	
+
+	public Square(){
+		this.x = 0;
+		this.y = 0;
+		this.acce = true;
+		this.visited = false;
+		this.entrance = false;
+		this.exit = false;
+	}
+
+	public Square(int x, int y ){
+		this.x = x;
+		this.y = y;
+		this.acce = true;
+		this.visited = false;
+		this.entrance = false;
+		this.exit = false;
+	}
+
+	public int getX(){
+		return x;
+	}
+
+	public int getY(){
+		return y;
+	}
+	
+	public boolean isAcce(){
+		return acce;
+	}
+
+	public boolean isVisited(){
+		return visited;
+	}
+	
+	public void visit(){
+		this.visited = true;
+	}
+	
+	public void isWall(){
+		this.acce = false;
+	}
+	
+	public boolean isEntrance(){
+		return entrance;
+	}
+	
+	public boolean isExit(){
+		return exit;
+	}
+	
+	public void setEntrance(){
+		this.entrance = true;
+	}
+	
+	public void setExit(){
+		this.exit = true;
+	}
+	
+	public String toString(){
+		String s = "Coordinate:" + getX() + "," + getY() + ",Accessiblity:" + isAcce() + ",checked: " 
+						+ isVisited() +", is entrance:" +  isEntrance() + "is exit:" +isExit();
+		return s;
+	}
+}

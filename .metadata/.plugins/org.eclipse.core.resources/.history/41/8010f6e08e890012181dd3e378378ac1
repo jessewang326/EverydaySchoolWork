@@ -1,0 +1,11 @@
+
+public class Test {
+	public static void main(String args[]){
+	    Maze maze = new Maze("maze1.txt");
+	    Explorator s = new StackExplorator();
+	    maze.explore(s);
+	    Explorator q = new QueueExplorator();
+	    maze.explore(q);
+	  }
+
+}

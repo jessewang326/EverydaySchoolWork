@@ -1,0 +1,66 @@
+public class Maze {
+	private boolean[][] maze;
+	private Square[][] mazeSquare;
+	private Square entrance;
+	private Square exit;
+
+	pubilc Maze(String mazeFile){
+		int x = 0;
+		int y = 0;
+		String line;
+		// create object that controls file reading and opens the file
+		InStringFile reader = new InStringFile(mazeFile);
+		System.out.println("\nReading from file " + mazeFile + "\n");
+
+		//create the maze
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		this.maze = new boolean[x][y];
+		this.mazeSquare = new Square[x][y];
+
+		// the entrance
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		this.entrance = new Square(x,y);
+
+
+		// the exit
+		line = (reader.read());
+		x = Integer.parseInt(line);
+		line = (reader.read());
+		y = Integer.parseInt(line);
+		this.exit = new Square(x,y);
+
+
+
+		x = 0;
+		y = 0;
+		do
+		{
+			line = (reader.read());
+
+			while (!line.isEmpty()){
+				if( line.charAt(0) == '1')
+					this.maze[x][y] = true;
+				else
+					this.maze[x][y] = false;
+				x++;
+			}
+			y++;
+		}
+		while (!reader.endOfFile()); 
+
+		reader.close(); 
+	}
+	
+	public boolean explore(Explorator e){
+		
+		
+	}
+}
+
+

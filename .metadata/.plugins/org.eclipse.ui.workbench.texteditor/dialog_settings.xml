@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="534" key="DIALOG_WIDTH"/>
+		<item value="211" key="DIALOG_Y_ORIGIN"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="598" key="DIALOG_X_ORIGIN"/>
+		<item value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="" key="selection"/>
+		<list key="findhistory">
+			<item value="true"/>
+			<item value="drawSeg"/>
+			<item value="drawseg"/>
+			<item value="is"/>
+			<item value="isEm"/>
+			<item value="addE"/>
+			<item value="your code"/>
+			<item value="your cide"/>
+		</list>
+		<list key="replacehistory">
+			<item value="y"/>
+			<item value="keyword"/>
+			<item value="char"/>
+			<item value="String"/>
+			<item value="variable"/>
+			<item value="variableList"/>
+			<item value="numVariables"/>
+			<item value="Variable"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LinearNode.java&apos; to &apos;Assignment 2/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;ILangugae&apos;&#x0D;&#x0A;- Destination element: &apos;Assignment 2/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;LinearNode.java&apos;" description="Copy compilation unit" destination="=Assignment 2/src&lt;" element1="/src&lt;{LinearNode.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1362877575199" units="1" version="1.0"/>
+</session>
